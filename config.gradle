@@ -1,0 +1,46 @@
+ext {
+
+    dependencyVersion = [
+            supportLibraryVersion: "27.1.1",
+            constraintVersion    : "1.1.2",
+            kotlin_version       : "1.2.71",
+    ]
+
+    dependencies = [
+            springframework_web          : 'org.springframework.boot:spring-boot-starter-web:1.4.3.RELEASE',
+            springframework_redis        : 'org.springframework.boot:spring-boot-starter-redis:1.4.3.RELEASE',
+            springframework_tomcat       : 'org.springframework.boot:spring-boot-starter-tomcat:1.4.3.RELEASE',
+            springframework_jpa          : 'org.springframework.boot:spring-boot-starter-data-jpa:1.4.3.RELEASE',
+            springframework_freemarker   : 'org.springframework.boot:spring-boot-starter-freemarker:1.4.3.RELEASE',
+            springframework_thymeleaf    : 'org.springframework.boot:spring-boot-starter-thymeleaf:1.4.3.RELEASE',
+            springframework_data_redis   : 'org.springframework.boot:spring-boot-starter-data-redis:1.5.2.RELEASE',
+            springframework_websocket    : 'org.springframework.boot:spring-boot-starter-websocket:1.4.3.RELEASE',
+//            springframework_security     : 'org.springframework.boot:spring-boot-starter-security:1.4.3.RELEASE',
+            springframework_session      : 'org.springframework.session:spring-session:1.3.0.RELEASE',
+            springframework_activemq     : 'org.springframework.boot:spring-boot-starter-activemq:1.4.3.RELEASE',
+            springframework_processor    : 'org.springframework.boot:spring-boot-configuration-processor:1.5.4.RELEASE',
+            thirdparty_freemarker        : 'org.freemarker:freemarker:2.3.23',
+            thirdparty_itextpdf          : 'com.itextpdf:itextpdf:5.5.8',
+            thirdparty_itext             : 'com.itextpdf:itext-asian:5.2.0',
+            thirdparty_itextpdf          : 'com.itextpdf.tool:xmlworker:5.5.9',
+            thirdparty_core_renderer     : 'org.xhtmlrenderer:core-renderer:R8',
+            thirdparty_fastjson          : 'com.alibaba:fastjson:1.2.31',
+            thirdparty_httpclient_commons: 'commons-httpclient:commons-httpclient:3.1',
+            thirdparty_codec             : 'commons-codec:commons-codec:1.10',
+            thirdparty_mysql             : 'mysql:mysql-connector-java:6.0.5',
+            thirdparty_servlet           : 'javax.servlet:javax.servlet-api:3.1.0',
+            thirdparty_httpclient        : 'org.apache.httpcomponents:httpclient:4.4.1',
+//thirdparty_gexin : 'com.gexin.platform:gexin-rp-sdk-http:4.0.1.7',
+//thirdparty_aliyun : 'com.aliyun.oss:aliyun-sdk-oss:2.2.1',
+            thirdparty_mpxj              : 'net.sf.mpxj:mpxj:7.7.1',
+            thirdparty_druid             : 'com.alibaba:druid:1.0.18',
+            thirdparty_jjwt              : 'io.jsonwebtoken:jjwt:0.9.0',
+            thirdparty_poi               : 'org.apache.poi:poi:3.17',
+            thirdparty_poi_ooxml         : 'org.apache.poi:poi-ooxml:3.17',
+            thirdparty_poi_scemas        : 'org.apache.poi:poi-ooxml-schemas:3.17',
+            thirdparty_zxing_core        : 'com.google.zxing:core:3.0.0',
+            thirdparty_zxing             : 'com.google.zxing:javase:3.0.0',
+            thirdparty_swgger            : 'io.springfox:springfox-swagger2:2.8.0',
+            thirdparty_swgger_ui         : 'io.springfox:springfox-swagger-ui:2.8.0',
+    ]
+}

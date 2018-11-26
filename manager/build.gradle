@@ -1,0 +1,53 @@
+
+group 'com.jarvisdong'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: "spring-boot"
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+bootRun {
+    addResources = true
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile project(':kit')
+
+    compile rootProject.ext.dependencies.springframework_web
+    compile rootProject.ext.dependencies.springframework_redis
+    compile rootProject.ext.dependencies.springframework_tomcat
+    compile rootProject.ext.dependencies.springframework_jpa
+    compile rootProject.ext.dependencies.springframework_freemarker
+    compile rootProject.ext.dependencies.springframework_thymeleaf
+    compile rootProject.ext.dependencies.springframework_data_redis
+    compile rootProject.ext.dependencies.springframework_websocket
+//    compile rootProject.ext.dependencies.springframework_security
+    compile rootProject.ext.dependencies.springframework_session
+    compile rootProject.ext.dependencies.springframework_activemq
+    compile rootProject.ext.dependencies.springframework_processor
+    compile rootProject.ext.dependencies.thirdparty_freemarker
+    compile rootProject.ext.dependencies.thirdparty_itextpdf
+    compile rootProject.ext.dependencies.thirdparty_itext
+    compile rootProject.ext.dependencies.thirdparty_itextpdf
+    compile rootProject.ext.dependencies.thirdparty_core_renderer
+    compile rootProject.ext.dependencies.thirdparty_fastjson
+    compile rootProject.ext.dependencies.thirdparty_httpclient_commons
+    compile rootProject.ext.dependencies.thirdparty_codec
+    compile rootProject.ext.dependencies.thirdparty_mysql
+    compile rootProject.ext.dependencies.thirdparty_servlet
+    compile rootProject.ext.dependencies.thirdparty_httpclient
+    compile rootProject.ext.dependencies.thirdparty_mpxj
+    compile rootProject.ext.dependencies.thirdparty_druid
+    compile rootProject.ext.dependencies.thirdparty_jjwt
+    compile rootProject.ext.dependencies.thirdparty_poi
+    compile rootProject.ext.dependencies.thirdparty_poi_ooxml
+    compile rootProject.ext.dependencies.thirdparty_poi_scemas
+    compile rootProject.ext.dependencies.thirdparty_zxing_core
+    compile rootProject.ext.dependencies.thirdparty_zxing
+    compile rootProject.ext.dependencies.thirdparty_swgger
+    compile rootProject.ext.dependencies.thirdparty_swgger_ui
+}

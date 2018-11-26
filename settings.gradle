@@ -1,2 +1,5 @@
 rootProject.name = 'jarvisroom'
 
+include 'manager'
+include 'kit'
+
