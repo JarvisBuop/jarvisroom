@@ -1,20 +1,20 @@
+group 'com.jarvisdong.manager'
+version '${rootProject.ext.dependencyVersion.parent_version}'
 
-group 'com.jarvisdong'
-version '1.0-SNAPSHOT'
-
-apply plugin: 'java'
-apply plugin: "spring-boot"
 apply plugin: 'war'
 
-sourceCompatibility = 1.8
+archivesBaseName = 'manager'
+
+war {
+    baseName = 'manager'
+    version =  '0.0.1'
+}
 
 bootRun {
     addResources = true
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-
     compile project(':kit')
 
     compile rootProject.ext.dependencies.springframework_web
@@ -29,19 +29,14 @@ dependencies {
     compile rootProject.ext.dependencies.springframework_session
     compile rootProject.ext.dependencies.springframework_activemq
     compile rootProject.ext.dependencies.springframework_processor
-    compile rootProject.ext.dependencies.thirdparty_freemarker
     compile rootProject.ext.dependencies.thirdparty_itextpdf
     compile rootProject.ext.dependencies.thirdparty_itext
     compile rootProject.ext.dependencies.thirdparty_itextpdf
     compile rootProject.ext.dependencies.thirdparty_core_renderer
-    compile rootProject.ext.dependencies.thirdparty_fastjson
     compile rootProject.ext.dependencies.thirdparty_httpclient_commons
     compile rootProject.ext.dependencies.thirdparty_codec
-    compile rootProject.ext.dependencies.thirdparty_mysql
     compile rootProject.ext.dependencies.thirdparty_servlet
-    compile rootProject.ext.dependencies.thirdparty_httpclient
     compile rootProject.ext.dependencies.thirdparty_mpxj
-    compile rootProject.ext.dependencies.thirdparty_druid
     compile rootProject.ext.dependencies.thirdparty_jjwt
     compile rootProject.ext.dependencies.thirdparty_poi
     compile rootProject.ext.dependencies.thirdparty_poi_ooxml

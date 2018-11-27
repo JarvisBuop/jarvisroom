@@ -1,25 +1,58 @@
 group 'com.jarvisdong'
-version '1.0-SNAPSHOT'
+version '${rootProject.ext.dependencyVersion.parent_version}'
 
 apply from: "config.gradle"
 
 buildscript {
     repositories {
-        google()
         jcenter()
         mavenCentral()
+        maven {
+            url 'https://repo.spring.io/plugins-snapshot'
+        }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.3.RELEASE")
+        classpath ("io.spring.gradle:dependency-management-plugin:0.5.7.RELEASE")
+//        classpath("io.spring.gradle:dependency-management-plugin:1.0.7.BUILD-SNAPSHOT")
     }
 }
 
-
 allprojects {
     repositories {
-        google()
         jcenter()
         mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: "spring-boot"
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    dependencyManagement {
+        dependencies {
+            dependency rootProject.ext.dependencies.thirdparty_fastjson
+            dependency rootProject.ext.dependencies.thirdparty_druid
+            dependency rootProject.ext.dependencies.thirdparty_httpclient
+            dependency rootProject.ext.dependencies.thirdparty_freemarker
+            dependency rootProject.ext.dependencies.thirdparty_mysql
+        }
+    }
+
+    dependencies {
+        testCompile "junit:junit:4.12"
     }
 }
 

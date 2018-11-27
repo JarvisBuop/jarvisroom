@@ -1,12 +1,22 @@
-group 'com.jarvisdong'
-version '1.0-SNAPSHOT'
+group 'com.jarvisdong.kit'
+version '${rootProject.ext.dependencyVersion.parent_version}'
 
-apply plugin: 'java'
+apply plugin: 'application'
 
-sourceCompatibility = 1.8
+archivesBaseName = 'kit'
+
+//bootRepackage {
+//    enabled = false
+//}
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 
-
+    /**
+     * 配置的依赖,在其他项目中的版本不一致;
+     */
+    compile rootProject.ext.dependencies.thirdparty_fastjson
+    compile rootProject.ext.dependencies.thirdparty_druid
+    compile rootProject.ext.dependencies.thirdparty_httpclient
+    compile rootProject.ext.dependencies.thirdparty_freemarker
+    compile rootProject.ext.dependencies.thirdparty_mysql
 }
