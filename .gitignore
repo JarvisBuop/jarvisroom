@@ -5,6 +5,7 @@ misc.xml
 vcs.xml
 workspace.xml
 gradle.xml
+*.iml
 
 # Ignore Gradle GUI config
 gradle-app.setting

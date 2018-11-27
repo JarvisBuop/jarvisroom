@@ -1,10 +1,10 @@
 package com.jarvisdong.jarvisroom.config;
 
+import com.mysql.cj.util.StringUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.MultiValueMap;
-import com.mysql.cj.core.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

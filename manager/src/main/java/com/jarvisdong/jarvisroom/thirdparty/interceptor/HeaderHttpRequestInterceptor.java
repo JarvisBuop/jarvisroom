@@ -4,7 +4,7 @@ import com.jarvisdong.jarvisroom.thirdparty.redis.RedisBaseOperation;
 import com.jarvisdong.jarvisroom.thirdparty.redis.entity.TokenCache;
 import com.jarvisdong.jarvisroom.util.IpUtil;
 import com.jarvisdong.jarvisroom.vo.UserInfoVo;
-import com.mysql.cj.core.util.StringUtils;
+import com.mysql.cj.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
