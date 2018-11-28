@@ -1,0 +1,25 @@
+group 'com.jarvisdong.manager.web'
+version '${rootProject.ext.dependencyVersion.parent_version}'
+
+apply plugin: 'war'
+
+archivesBaseName = 'manager_web'
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile project(':kit')
+
+    compile rootProject.ext.dependencies.springframework_web
+    compile rootProject.ext.dependencies.springframework_redis
+    compile rootProject.ext.dependencies.springframework_tomcat
+    compile rootProject.ext.dependencies.springframework_jpa
+    compile rootProject.ext.dependencies.springframework_freemarker
+    compile rootProject.ext.dependencies.springframework_thymeleaf
+    compile rootProject.ext.dependencies.springframework_data_redis
+    compile rootProject.ext.dependencies.springframework_websocket
+    compile rootProject.ext.dependencies.springframework_session
+    compile rootProject.ext.dependencies.springframework_activemq
+    compile rootProject.ext.dependencies.springframework_processor
+}

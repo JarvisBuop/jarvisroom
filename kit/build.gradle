@@ -19,4 +19,7 @@ dependencies {
     compile rootProject.ext.dependencies.thirdparty_httpclient
     compile rootProject.ext.dependencies.thirdparty_freemarker
     compile rootProject.ext.dependencies.thirdparty_mysql
+    compile rootProject.ext.dependencies.springframework
+    compile rootProject.ext.dependencies.springframework_dubbo
+    compile rootProject.ext.dependencies.springframework_test
 }

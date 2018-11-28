@@ -25,10 +25,10 @@ dependencies {
     compile rootProject.ext.dependencies.springframework_thymeleaf
     compile rootProject.ext.dependencies.springframework_data_redis
     compile rootProject.ext.dependencies.springframework_websocket
-//    compile rootProject.ext.dependencies.springframework_security
     compile rootProject.ext.dependencies.springframework_session
     compile rootProject.ext.dependencies.springframework_activemq
     compile rootProject.ext.dependencies.springframework_processor
+//    compile rootProject.ext.dependencies.springframework_security
     compile rootProject.ext.dependencies.thirdparty_itextpdf
     compile rootProject.ext.dependencies.thirdparty_itext
     compile rootProject.ext.dependencies.thirdparty_itextpdf
