@@ -4,6 +4,9 @@ version '${rootProject.ext.dependencyVersion.parent_version}'
 apply from: "config.gradle"
 
 buildscript {
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
+    }
     repositories {
         jcenter()
         mavenCentral()
@@ -12,9 +15,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.3.RELEASE")
-        classpath ("io.spring.gradle:dependency-management-plugin:0.5.7.RELEASE")
-//        classpath("io.spring.gradle:dependency-management-plugin:1.0.7.BUILD-SNAPSHOT")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+//        classpath ("io.spring.gradle:dependency-management-plugin:0.5.7.RELEASE")
     }
 }
 
@@ -28,7 +30,7 @@ allprojects {
 subprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
-    apply plugin: "spring-boot"
+    apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
     sourceCompatibility = 1.8

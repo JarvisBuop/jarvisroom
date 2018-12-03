@@ -10,7 +10,7 @@ import java.util.List;
  * Created by JarvisDong on 2018/11/28.
  */
 @Service(
-        version = "1.0.0",
+        version = "${demo.service.version}",
         application = "${dubbo.application.id}",
         protocol = "${dubbo.protocol.id}",
         registry = "${dubbo.registry.id}"
