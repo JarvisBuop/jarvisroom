@@ -3,7 +3,7 @@ version '${rootProject.ext.dependencyVersion.parent_version}'
 
 apply plugin: 'application'
 
-archivesBaseName = 'kit'
+archivesBaseName = 'jarvisroom-kit'
 
 //bootRepackage {
 //    enabled = false

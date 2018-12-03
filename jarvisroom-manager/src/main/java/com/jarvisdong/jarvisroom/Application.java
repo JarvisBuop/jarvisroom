@@ -22,7 +22,7 @@ public class Application /*extends SpringBootServletInitializer implements Embed
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(Application.class)
-				.web(WebApplicationType.NONE)
+//				.web(WebApplicationType.NONE)
 				.run(args);
 	}
 

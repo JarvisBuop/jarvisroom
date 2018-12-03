@@ -3,13 +3,13 @@ version '${rootProject.ext.dependencyVersion.parent_version}'
 
 apply plugin: 'war'
 
-archivesBaseName = 'manager_web'
+archivesBaseName = 'jarvisroom-manager-web'
 
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
-    compile project(':kit')
+    compile project(':jarvisroom-kit')
 
     compile rootProject.ext.dependencies.springframework
 //    compile rootProject.ext.dependencies.springframework_test

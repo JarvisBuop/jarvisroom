@@ -1,6 +1,6 @@
 rootProject.name = 'jarvisroom'
 
-include 'manager'
-include 'kit'
-include 'manager_web'
+include 'jarvisroom-manager'
+include 'jarvisroom-kit'
+include 'jarvisroom-manager-web'
 

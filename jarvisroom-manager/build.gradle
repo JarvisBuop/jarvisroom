@@ -3,7 +3,7 @@ version '${rootProject.ext.dependencyVersion.parent_version}'
 
 apply plugin: 'war'
 
-archivesBaseName = 'manager'
+archivesBaseName = 'jarvisroom-manager'
 
 war {
     baseName = 'manager'
@@ -11,7 +11,7 @@ war {
 }
 
 dependencies {
-    compile project(':kit')
+    compile project(':jarvisroom-kit')
 
     compile rootProject.ext.dependencies.springframework
 //    compile rootProject.ext.dependencies.springframework_test
