@@ -1,0 +1,8 @@
+group 'com.jarvisdong.interface'
+version '${rootProject.ext.dependencyVersion.parent_version}'
+
+archivesBaseName = 'jarvisroom-interface'
+
+dependencies {
+    compile project(':jarvisroom-pojo')
+}

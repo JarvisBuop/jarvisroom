@@ -1,0 +1,6 @@
+${AnsiColor.BRIGHT_YELLOW}
+
+manager_web
+
+ ${AnsiColor.BRIGHT_BLUE}
+::jarvisroom :: 测试项目

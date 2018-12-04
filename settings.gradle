@@ -1,6 +1,9 @@
 rootProject.name = 'jarvisroom'
 
 include 'jarvisroom-manager'
-include 'jarvisroom-kit'
 include 'jarvisroom-manager-web'
+include 'jarvisroom-kit'
+include 'jarvisroom-interface'
+include 'jarvisroom-pojo'
+include 'jarvisroom-dao'
 

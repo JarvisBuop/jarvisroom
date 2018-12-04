@@ -1,6 +1,26 @@
 # jarvisroom. (developing...)
 spring-boot demo
 
+-----
+-----------summary------------
+-----
+
+>war:
+
+manager + manager web;
+
+----
+
+>jar:
+ 
+kit 
+
+
+
+-----
+-----------relation knowledge------------
+-----
+
 >版本锁定
 
 ```

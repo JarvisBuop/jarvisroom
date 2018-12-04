@@ -34,6 +34,7 @@ allprojects {
 }
 
 subprojects {
+    apply plugin: 'application'
     apply plugin: 'java'
     apply plugin: 'idea'
     apply plugin: 'org.springframework.boot'
@@ -56,6 +57,7 @@ subprojects {
             dependency rootProject.ext.dependencies.thirdparty_httpclient
             dependency rootProject.ext.dependencies.thirdparty_freemarker
             dependency rootProject.ext.dependencies.thirdparty_mysql
+            dependency rootProject.ext.dependencies.thirdparty_apachecommons
         }
     }
 

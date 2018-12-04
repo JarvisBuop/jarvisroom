@@ -7,9 +7,9 @@ archivesBaseName = 'jarvisroom-manager-web'
 
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-
     compile project(':jarvisroom-kit')
+    compile project(':jarvisroom-interface')
+    compile project(':jarvisroom-dao')
 
     compile rootProject.ext.dependencies.springframework
 //    compile rootProject.ext.dependencies.springframework_test

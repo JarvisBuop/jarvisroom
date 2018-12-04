@@ -1,0 +1,8 @@
+group 'com.jarvisdong.dao'
+version '${rootProject.ext.dependencyVersion.parent_version}'
+
+archivesBaseName = 'jarvisroom-dao'
+
+dependencies {
+    compile project(':jarvisroom-pojo')
+}

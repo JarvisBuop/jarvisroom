@@ -12,13 +12,15 @@ war {
 
 dependencies {
     compile project(':jarvisroom-kit')
+    compile project(':jarvisroom-interface')
+    compile project(':jarvisroom-dao')
 
     //spring包
     compile rootProject.ext.dependencies.springframework
     compile rootProject.ext.dependencies.springframework_test
-    compile rootProject.ext.dependencies.springframework_web
-    compile rootProject.ext.dependencies.springframework_jpa
-    compile rootProject.ext.dependencies.springframework_thymeleaf
+//    compile rootProject.ext.dependencies.springframework_web
+//    compile rootProject.ext.dependencies.springframework_jpa
+//    compile rootProject.ext.dependencies.springframework_thymeleaf
 //    compile rootProject.ext.dependencies.springframework_validation
 //    compile rootProject.ext.dependencies.springframework_redis
 //    compile rootProject.ext.dependencies.springframework_tomcat
@@ -33,8 +35,8 @@ dependencies {
     compile rootProject.ext.dependencies.springframework_dubbo
     compile rootProject.ext.dependencies.springframework_dubbo_actuator
     //swgger框架;
-    compile rootProject.ext.dependencies.thirdparty_swgger
-    compile rootProject.ext.dependencies.thirdparty_swgger_ui
+//    compile rootProject.ext.dependencies.thirdparty_swgger
+//    compile rootProject.ext.dependencies.thirdparty_swgger_ui
 //    compile rootProject.ext.dependencies.springframework_security
 //    compile rootProject.ext.dependencies.thirdparty_itextpdf
 //    compile rootProject.ext.dependencies.thirdparty_itext
