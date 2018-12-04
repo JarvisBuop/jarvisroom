@@ -4,11 +4,13 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+@EnableSwagger2 // 开启 Swagger
 @SpringBootApplication
 //@EnableScheduling
 //@EnableJpaRepositories(basePackages = "com.jarvisdong.jarvisroom.repository")
-public class Application /*extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer*/ {
+public class Application {
 
 //	public Application() {
 //        super();
@@ -25,10 +27,4 @@ public class Application /*extends SpringBootServletInitializer implements Embed
 //				.web(WebApplicationType.NONE)
 				.run(args);
 	}
-
-
-//	@Override
-//	public void customize(ConfigurableEmbeddedServletContainer container) {
-//		container.setPort(8082);
-//	}
 }
