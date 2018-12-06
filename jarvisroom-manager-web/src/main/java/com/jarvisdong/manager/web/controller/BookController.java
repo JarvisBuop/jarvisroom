@@ -30,18 +30,15 @@ public class BookController {
     private BookService bookService;
 
     @RequestMapping(value = "/getAllBooks", method = {RequestMethod.GET, RequestMethod.POST})
-    public ResponseEntity<Object> getAllBooks(Model model) {
+    public String getAllBooks(Model model) {
         logger.info("查看APP页面权限接口开始");
         try {
             List<Book> all = bookService.findAll();
             model.addAttribute("bookLists", all);
-//            return Constants.WebPageAddr.WEB_NAME_BOOK;
-//            return Constants.WebPageCommon.WEB_PAGE_NAME_ERROR;
-//            return "bookList";
+            return Constants.WebPageAddr.WEB_NAME_BOOK;
         } catch (Exception e) {
             logger.info("查看APP页面权限接口出错:{}", e.getMessage());
-//            return Constants.WebPageCommon.WEB_PAGE_NAME_ERROR;
+            return Constants.WebPageCommon.WEB_PAGE_NAME_ERROR;
         }
-        return new ResponseEntity<Object>("kkkk", HttpStatus.OK);
     }
 }

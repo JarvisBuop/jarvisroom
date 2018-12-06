@@ -7,7 +7,7 @@ archivesBaseName = 'jarvisroom-manager'
 
 war {
     baseName = 'manager'
-    version =  '0.0.1'
+    version = '0.0.1'
 }
 
 dependencies {
@@ -18,18 +18,20 @@ dependencies {
     //spring包
     compile rootProject.ext.dependencies.springframework
     compile rootProject.ext.dependencies.springframework_test
+    compile rootProject.ext.dependencies.thirdparty_druid
+    compile rootProject.ext.dependencies.thirdparty_mysql
+//    compile rootProject.ext.dependencies.springframework_redis
+//    compile rootProject.ext.dependencies.springframework_data_redis
 //    compile rootProject.ext.dependencies.springframework_web
-//    compile rootProject.ext.dependencies.springframework_jpa
 //    compile rootProject.ext.dependencies.springframework_thymeleaf
 //    compile rootProject.ext.dependencies.springframework_validation
-//    compile rootProject.ext.dependencies.springframework_redis
 //    compile rootProject.ext.dependencies.springframework_tomcat
 //    compile rootProject.ext.dependencies.springframework_freemarker
-//    compile rootProject.ext.dependencies.springframework_data_redis
 //    compile rootProject.ext.dependencies.springframework_websocket
 //    compile rootProject.ext.dependencies.springframework_session
 //    compile rootProject.ext.dependencies.springframework_activemq
 //    compile rootProject.ext.dependencies.springframework_processor
+//    compile rootProject.ext.dependencies.springframework_security
     compile rootProject.ext.dependencies.springframework_actuator
     //dubbo包;
     compile rootProject.ext.dependencies.springframework_dubbo
@@ -37,7 +39,6 @@ dependencies {
     //swgger框架;
 //    compile rootProject.ext.dependencies.thirdparty_swgger
 //    compile rootProject.ext.dependencies.thirdparty_swgger_ui
-//    compile rootProject.ext.dependencies.springframework_security
 //    compile rootProject.ext.dependencies.thirdparty_itextpdf
 //    compile rootProject.ext.dependencies.thirdparty_itext
 //    compile rootProject.ext.dependencies.thirdparty_itextpdf

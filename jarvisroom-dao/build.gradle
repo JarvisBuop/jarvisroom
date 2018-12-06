@@ -5,4 +5,6 @@ archivesBaseName = 'jarvisroom-dao'
 
 dependencies {
     compile project(':jarvisroom-pojo')
+
+    compile rootProject.ext.dependencies.springframework_jpa
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--#zh-CN-->
 <html lang="en"
-      xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -32,10 +32,10 @@
             <th class="col-md-2">管理</th>
         </tr>
         </thead>
-        <tbody class="row">
+        <tbody >
         <tr th:each="book : ${bookLists}">
             <th scope="row" th:text="${book.id}"></th>
-            <td th:href="@{/book/detail/{bookId}(bookId=${book.id})" th:text="${book.name}"></td>
+            <td th:href="@{/book/detail/{bookId}(bookId=${book.id})}" th:text="${book.name}"></td>
             <td th:text="${book.writer}"></td>
             <td th:text="${book.introduction}"></td>
             <td>

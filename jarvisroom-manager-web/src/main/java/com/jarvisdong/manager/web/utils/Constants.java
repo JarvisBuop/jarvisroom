@@ -6,10 +6,10 @@ package com.jarvisdong.manager.web.utils;
 public class Constants {
 
     public static class WebPageAddr{
-        public static final String WEB_NAME_BOOK="/book/bookList";
+        public static final String WEB_NAME_BOOK="book/bookList";
     }
 
     public static class WebPageCommon{
-        public static final String WEB_PAGE_NAME_ERROR="templates/common/error500";
+        public static final String WEB_PAGE_NAME_ERROR="common/error500";
     }
 }

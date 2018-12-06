@@ -11,20 +11,18 @@ dependencies {
     compile project(':jarvisroom-interface')
     compile project(':jarvisroom-dao')
 
+    //----------------spring-------------------
     compile rootProject.ext.dependencies.springframework
-//    compile rootProject.ext.dependencies.springframework_test
-    compile rootProject.ext.dependencies.springframework_web
-//    compile rootProject.ext.dependencies.springframework_redis
+    compile rootProject.ext.dependencies.springframework_test
     compile rootProject.ext.dependencies.springframework_tomcat
-//    compile rootProject.ext.dependencies.springframework_jpa
-//    compile rootProject.ext.dependencies.springframework_freemarker
-//    compile rootProject.ext.dependencies.springframework_thymeleaf
-//    compile rootProject.ext.dependencies.springframework_data_redis
-//    compile rootProject.ext.dependencies.springframework_websocket
-//    compile rootProject.ext.dependencies.springframework_session
-//    compile rootProject.ext.dependencies.springframework_activemq
-//    compile rootProject.ext.dependencies.springframework_processor
+    compile rootProject.ext.dependencies.springframework_web
+    compile rootProject.ext.dependencies.springframework_thymeleaf
 
+    //----------------spring-tools------------------
+    compile rootProject.ext.dependencies.springframework_devtools
+    compile rootProject.ext.dependencies.springframework_springloaded
+
+    //----------------dubbo-------------------
     compile rootProject.ext.dependencies.springframework_actuator
     compile rootProject.ext.dependencies.springframework_dubbo
     compile rootProject.ext.dependencies.springframework_dubbo_actuator

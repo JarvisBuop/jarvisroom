@@ -9,10 +9,7 @@ dependencies {
      * 配置的依赖,在其他项目中的版本不一致;
      */
     compile rootProject.ext.dependencies.thirdparty_fastjson
-//    compile rootProject.ext.dependencies.thirdparty_druid
     compile rootProject.ext.dependencies.thirdparty_httpclient
-//    compile rootProject.ext.dependencies.thirdparty_freemarker
-//    compile rootProject.ext.dependencies.thirdparty_mysql
     compile rootProject.ext.dependencies.thirdparty_apachecommons
 
 }
