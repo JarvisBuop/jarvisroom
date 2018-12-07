@@ -11,6 +11,7 @@ dependencies {
     compile project(':jarvisroom-interface')
     compile project(':jarvisroom-dao')
 
+
     //----------------spring-------------------
     compile rootProject.ext.dependencies.springframework
     compile rootProject.ext.dependencies.springframework_test
@@ -26,4 +27,6 @@ dependencies {
     compile rootProject.ext.dependencies.springframework_actuator
     compile rootProject.ext.dependencies.springframework_dubbo
     compile rootProject.ext.dependencies.springframework_dubbo_actuator
+//    compile rootProject.ext.dependencies.thirdparty_kryo_serial
+
 }

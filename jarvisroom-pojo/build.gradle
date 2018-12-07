@@ -4,5 +4,6 @@ version '${rootProject.ext.dependencyVersion.parent_version}'
 archivesBaseName = 'jarvisroom-pojo'
 
 dependencies {
-
+    //pojo中也有Page等分页对象,放在pojo中;
+    compile rootProject.ext.dependencies.springframework_jpa
 }

@@ -11,5 +11,6 @@ dependencies {
     compile rootProject.ext.dependencies.thirdparty_fastjson
     compile rootProject.ext.dependencies.thirdparty_httpclient
     compile rootProject.ext.dependencies.thirdparty_apachecommons
+    compile rootProject.ext.dependencies.thirdparty_servlet
 
 }

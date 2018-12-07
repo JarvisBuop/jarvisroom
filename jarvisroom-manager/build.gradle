@@ -15,6 +15,7 @@ dependencies {
     compile project(':jarvisroom-interface')
     compile project(':jarvisroom-dao')
 
+
     //spring包
     compile rootProject.ext.dependencies.springframework
     compile rootProject.ext.dependencies.springframework_test
@@ -36,6 +37,7 @@ dependencies {
     //dubbo包;
     compile rootProject.ext.dependencies.springframework_dubbo
     compile rootProject.ext.dependencies.springframework_dubbo_actuator
+//    compile rootProject.ext.dependencies.thirdparty_kryo_serial
     //swgger框架;
 //    compile rootProject.ext.dependencies.thirdparty_swgger
 //    compile rootProject.ext.dependencies.thirdparty_swgger_ui

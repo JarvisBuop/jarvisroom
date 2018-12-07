@@ -33,12 +33,12 @@ public interface BookService {
      *
      * @param id 编号
      */
-    BookVo delete(Long id);
+    BookVo delete(int id);
 
     /**
      * 获取 BookVo
      *
      * @param id 编号
      */
-    BookVo findById(Long id);
+    BookVo findById(int id);
 }

@@ -14,7 +14,7 @@ public class BookVo implements Serializable {
     /**
      * 编号
      */
-    private Long id;
+    private int id=0;
 
     /**
      * 书名
@@ -31,7 +31,7 @@ public class BookVo implements Serializable {
      */
     private String introduction;
 
-    public BookVo(Long id, String name, String writer, String introduction) {
+    public BookVo(int id, String name, String writer, String introduction) {
         this.id = id;
         this.name = name;
         this.writer = writer;
@@ -41,11 +41,11 @@ public class BookVo implements Serializable {
     public BookVo() {
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
