@@ -1,7 +1,7 @@
 package com.jarvisdong.jarvisroom.serviceimpl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.jarvisdong.pojo.Book;
+import com.jarvisdong.pojo.BookVo;
 import com.jarvisdong.service.BookService;
 
 import java.util.ArrayList;
@@ -17,35 +17,35 @@ import java.util.List;
         registry = "${dubbo.registry.id}"
 )
 public class BookServiceImpl implements BookService {
-    private List<Book> mList = new ArrayList<Book>(){
+    private List<BookVo> mList = new ArrayList<BookVo>(){
         {
-            add(new Book(0l,"my book1","jarvis","good book1"));
-            add(new Book(1l,"my book2","dong","good book2"));
+            add(new BookVo(0l,"my book1","jarvis","good book1"));
+            add(new BookVo(1l,"my book2","dong","good book2"));
         }
     };
 
     @Override
-    public List<Book> findAll() {
+    public List<BookVo> findAll() {
         return mList;
     }
 
     @Override
-    public Book insertByBook(Book book) {
+    public BookVo insertByBook(BookVo bookVo) {
         return null;
     }
 
     @Override
-    public Book update(Book book) {
+    public BookVo update(BookVo bookVo) {
         return null;
     }
 
     @Override
-    public Book delete(Long id) {
+    public BookVo delete(Long id) {
         return null;
     }
 
     @Override
-    public Book findById(Long id) {
+    public BookVo findById(Long id) {
         return null;
     }
 }

@@ -2,13 +2,10 @@ package com.jarvisdong.manager.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.jarvisdong.manager.web.utils.Constants;
-import com.jarvisdong.pojo.Book;
+import com.jarvisdong.pojo.BookVo;
 import com.jarvisdong.service.BookService;
-import org.apache.http.protocol.HTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +30,7 @@ public class BookController {
     public String getAllBooks(Model model) {
         logger.info("查看APP页面权限接口开始");
         try {
-            List<Book> all = bookService.findAll();
+            List<BookVo> all = bookService.findAll();
             model.addAttribute("bookLists", all);
             return Constants.WebPageAddr.WEB_NAME_BOOK;
         } catch (Exception e) {

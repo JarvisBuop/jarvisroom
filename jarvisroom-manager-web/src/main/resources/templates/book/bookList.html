@@ -33,20 +33,20 @@
         </tr>
         </thead>
         <tbody >
-        <tr th:each="book : ${bookLists}">
-            <th scope="row" th:text="${book.id}"></th>
-            <td th:href="@{/book/detail/{bookId}(bookId=${book.id})}" th:text="${book.name}"></td>
-            <td th:text="${book.writer}"></td>
-            <td th:text="${book.introduction}"></td>
+        <tr th:each="bookVo : ${bookLists}">
+            <th scope="row" th:text="${bookVo.id}"></th>
+            <td th:href="@{/bookVo/detail/{bookId}(bookId=${bookVo.id})}" th:text="${bookVo.name}"></td>
+            <td th:text="${bookVo.writer}"></td>
+            <td th:text="${bookVo.introduction}"></td>
             <td>
-                <a class="btn btn-danger" th:href="@{/book/update/{bookId}(bookId=${book.id})}">编辑</a>
-                <a class="btn btn-danger" th:href="@{/book/delete/{bookId}(bookId=${book.id})}">删除</a>
+                <a class="btn btn-danger" th:href="@{/bookVo/update/{bookId}(bookId=${bookVo.id})}">编辑</a>
+                <a class="btn btn-danger" th:href="@{/bookVo/delete/{bookId}(bookId=${bookVo.id})}">删除</a>
             </td>
         </tr>
         </tbody>
     </table>
 
-    <div><a class="btn btn-primary" href="/book/create" role="button">新增书籍</a></div>
+    <div><a class="btn btn-primary" href="/bookVo/create" role="button">新增书籍</a></div>
 </div>
 </body>
 </html>

@@ -3,11 +3,12 @@ package com.jarvisdong.pojo;
 import java.io.Serializable;
 
 /**
- * Book 实体类
+ * BookVo 实体类
  *
  * Created by bysocket on 30/09/2017.
  */
-public class Book implements Serializable {
+
+public class BookVo implements Serializable {
 
     private static final long serialVersionUID = -6243733009672073347L;
     /**
@@ -30,14 +31,14 @@ public class Book implements Serializable {
      */
     private String introduction;
 
-    public Book(Long id, String name, String writer, String introduction) {
+    public BookVo(Long id, String name, String writer, String introduction) {
         this.id = id;
         this.name = name;
         this.writer = writer;
         this.introduction = introduction;
     }
 
-    public Book() {
+    public BookVo() {
     }
 
     public Long getId() {

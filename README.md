@@ -43,7 +43,7 @@ kit
 
 1. `@Componen`组合`@Value` 使用application.properties的key:value注入;
 
-2. 使用`@Component` `@ConfigurationProperties(prefix = "demo.book")`
+2. 使用`@Component` `@ConfigurationProperties(prefix = "demo.bookVo")`
 `@Validated`注入属性;
 
 

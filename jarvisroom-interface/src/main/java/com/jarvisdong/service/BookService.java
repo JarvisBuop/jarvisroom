@@ -1,6 +1,7 @@
 package com.jarvisdong.service;
 
-import com.jarvisdong.pojo.Book;
+
+import com.jarvisdong.pojo.BookVo;
 
 import java.util.List;
 
@@ -9,35 +10,35 @@ import java.util.List;
  */
 public interface BookService {
     /**
-     * 获取所有 Book
+     * 获取所有 BookVo
      */
-    List<Book> findAll();
+    List<BookVo> findAll();
 
     /**
-     * 新增 Book
+     * 新增 BookVo
      *
-     * @param book {@link Book}
+     * @param bookVo {@link BookVo}
      */
-    Book insertByBook(Book book);
+    BookVo insertByBook(BookVo bookVo);
 
     /**
-     * 更新 Book
+     * 更新 BookVo
      *
-     * @param book {@link Book}
+     * @param bookVo {@link BookVo}
      */
-    Book update(Book book);
+    BookVo update(BookVo bookVo);
 
     /**
-     * 删除 Book
-     *
-     * @param id 编号
-     */
-    Book delete(Long id);
-
-    /**
-     * 获取 Book
+     * 删除 BookVo
      *
      * @param id 编号
      */
-    Book findById(Long id);
+    BookVo delete(Long id);
+
+    /**
+     * 获取 BookVo
+     *
+     * @param id 编号
+     */
+    BookVo findById(Long id);
 }
