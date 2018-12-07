@@ -1,6 +1,24 @@
 ${AnsiColor.BRIGHT_YELLOW}
 
-manager_web
+  _____ _____    ____ _____     ____   _____________  _  __ ____\_ |__
+ /     \\__  \  /    \\__  \   / ___\_/ __ \_  __ \ \/ \/ // __ \| __ \
+|  Y Y  \/ __ \|   |  \/ __ \_/ /_/  >  ___/|  | \/\     /\  ___/| \_\ \
+|__|_|  (____  /___|  (____  /\___  / \___  >__|____\/\_/  \___  >___  /
+      \/     \/     \/     \//_____/      \/  /_____/          \/    \/
 
- ${AnsiColor.BRIGHT_BLUE}
-::jarvisroom :: 测试项目
+
+${AnsiColor.BRIGHT_BLUE}
+
+::jarvisroom-manager-web::管理页面web层
+
+---
+${AnsiColor.BRIGHT_MAGENTA}
+${application.version}
+---
+${application.formatted-version}
+---
+${spring-boot.version}
+---
+${spring-boot.formatted-version}
+---
+${application.title}

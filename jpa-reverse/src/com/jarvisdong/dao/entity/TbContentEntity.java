@@ -2,8 +2,10 @@ package com.jarvisdong.dao.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Objects;
 
+/**
+ * Created by JarvisDong on 2018/12/7.
+ */
 @Entity
 @Table(name = "tb_content", schema = "jarvisroom", catalog = "")
 public class TbContentEntity {
@@ -133,23 +135,37 @@ public class TbContentEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         TbContentEntity that = (TbContentEntity) o;
-        return id == that.id &&
-                categoryId == that.categoryId &&
-                Objects.equals(title, that.title) &&
-                Objects.equals(subTitle, that.subTitle) &&
-                Objects.equals(titleDesc, that.titleDesc) &&
-                Objects.equals(url, that.url) &&
-                Objects.equals(pic, that.pic) &&
-                Objects.equals(pic2, that.pic2) &&
-                Objects.equals(content, that.content) &&
-                Objects.equals(created, that.created) &&
-                Objects.equals(updated, that.updated);
+
+        if (id != that.id) return false;
+        if (categoryId != that.categoryId) return false;
+        if (title != null ? !title.equals(that.title) : that.title != null) return false;
+        if (subTitle != null ? !subTitle.equals(that.subTitle) : that.subTitle != null) return false;
+        if (titleDesc != null ? !titleDesc.equals(that.titleDesc) : that.titleDesc != null) return false;
+        if (url != null ? !url.equals(that.url) : that.url != null) return false;
+        if (pic != null ? !pic.equals(that.pic) : that.pic != null) return false;
+        if (pic2 != null ? !pic2.equals(that.pic2) : that.pic2 != null) return false;
+        if (content != null ? !content.equals(that.content) : that.content != null) return false;
+        if (created != null ? !created.equals(that.created) : that.created != null) return false;
+        if (updated != null ? !updated.equals(that.updated) : that.updated != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(id, categoryId, title, subTitle, titleDesc, url, pic, pic2, content, created, updated);
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + (int) (categoryId ^ (categoryId >>> 32));
+        result = 31 * result + (title != null ? title.hashCode() : 0);
+        result = 31 * result + (subTitle != null ? subTitle.hashCode() : 0);
+        result = 31 * result + (titleDesc != null ? titleDesc.hashCode() : 0);
+        result = 31 * result + (url != null ? url.hashCode() : 0);
+        result = 31 * result + (pic != null ? pic.hashCode() : 0);
+        result = 31 * result + (pic2 != null ? pic2.hashCode() : 0);
+        result = 31 * result + (content != null ? content.hashCode() : 0);
+        result = 31 * result + (created != null ? created.hashCode() : 0);
+        result = 31 * result + (updated != null ? updated.hashCode() : 0);
+        return result;
     }
 }

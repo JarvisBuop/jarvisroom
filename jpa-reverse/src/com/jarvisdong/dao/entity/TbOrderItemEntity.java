@@ -1,8 +1,10 @@
 package com.jarvisdong.dao.entity;
 
 import javax.persistence.*;
-import java.util.Objects;
 
+/**
+ * Created by JarvisDong on 2018/12/7.
+ */
 @Entity
 @Table(name = "tb_order_item", schema = "jarvisroom", catalog = "")
 public class TbOrderItemEntity {
@@ -99,20 +101,31 @@ public class TbOrderItemEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         TbOrderItemEntity that = (TbOrderItemEntity) o;
-        return Objects.equals(id, that.id) &&
-                Objects.equals(itemId, that.itemId) &&
-                Objects.equals(orderId, that.orderId) &&
-                Objects.equals(num, that.num) &&
-                Objects.equals(title, that.title) &&
-                Objects.equals(price, that.price) &&
-                Objects.equals(totalFee, that.totalFee) &&
-                Objects.equals(picPath, that.picPath);
+
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (itemId != null ? !itemId.equals(that.itemId) : that.itemId != null) return false;
+        if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
+        if (num != null ? !num.equals(that.num) : that.num != null) return false;
+        if (title != null ? !title.equals(that.title) : that.title != null) return false;
+        if (price != null ? !price.equals(that.price) : that.price != null) return false;
+        if (totalFee != null ? !totalFee.equals(that.totalFee) : that.totalFee != null) return false;
+        if (picPath != null ? !picPath.equals(that.picPath) : that.picPath != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(id, itemId, orderId, num, title, price, totalFee, picPath);
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (itemId != null ? itemId.hashCode() : 0);
+        result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
+        result = 31 * result + (num != null ? num.hashCode() : 0);
+        result = 31 * result + (title != null ? title.hashCode() : 0);
+        result = 31 * result + (price != null ? price.hashCode() : 0);
+        result = 31 * result + (totalFee != null ? totalFee.hashCode() : 0);
+        result = 31 * result + (picPath != null ? picPath.hashCode() : 0);
+        return result;
     }
 }

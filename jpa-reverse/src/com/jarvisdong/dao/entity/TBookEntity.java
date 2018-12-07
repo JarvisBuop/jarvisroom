@@ -1,8 +1,10 @@
 package com.jarvisdong.dao.entity;
 
 import javax.persistence.*;
-import java.util.Objects;
 
+/**
+ * Created by JarvisDong on 2018/12/7.
+ */
 @Entity
 @Table(name = "t_book", schema = "jarvisroom", catalog = "")
 public class TBookEntity {
@@ -55,16 +57,23 @@ public class TBookEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         TBookEntity that = (TBookEntity) o;
-        return id == that.id &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(writer, that.writer) &&
-                Objects.equals(introduction, that.introduction);
+
+        if (id != that.id) return false;
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (writer != null ? !writer.equals(that.writer) : that.writer != null) return false;
+        if (introduction != null ? !introduction.equals(that.introduction) : that.introduction != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(id, name, writer, introduction);
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (writer != null ? writer.hashCode() : 0);
+        result = 31 * result + (introduction != null ? introduction.hashCode() : 0);
+        return result;
     }
 }

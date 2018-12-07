@@ -2,8 +2,10 @@ package com.jarvisdong.dao.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Objects;
 
+/**
+ * Created by JarvisDong on 2018/12/7.
+ */
 @Entity
 @Table(name = "tb_item_desc", schema = "jarvisroom", catalog = "")
 public class TbItemDescEntity {
@@ -56,16 +58,23 @@ public class TbItemDescEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         TbItemDescEntity that = (TbItemDescEntity) o;
-        return itemId == that.itemId &&
-                Objects.equals(itemDesc, that.itemDesc) &&
-                Objects.equals(created, that.created) &&
-                Objects.equals(updated, that.updated);
+
+        if (itemId != that.itemId) return false;
+        if (itemDesc != null ? !itemDesc.equals(that.itemDesc) : that.itemDesc != null) return false;
+        if (created != null ? !created.equals(that.created) : that.created != null) return false;
+        if (updated != null ? !updated.equals(that.updated) : that.updated != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(itemId, itemDesc, created, updated);
+        int result = (int) (itemId ^ (itemId >>> 32));
+        result = 31 * result + (itemDesc != null ? itemDesc.hashCode() : 0);
+        result = 31 * result + (created != null ? created.hashCode() : 0);
+        result = 31 * result + (updated != null ? updated.hashCode() : 0);
+        return result;
     }
 }

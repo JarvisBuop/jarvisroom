@@ -6,5 +6,19 @@ ${AnsiColor.BRIGHT_YELLOW}
 /\__|  (____  /__|    \_/ |__/____  > |__|   \____/ \____/|__|_|  /
 \______|    \/                    \/                            \/
 
- ${AnsiColor.BRIGHT_BLUE}
-::jarvisroom :: 测试项目
+
+${AnsiColor.BRIGHT_BLUE}
+
+::jarvisroom-manager::管理页面服务层
+
+---
+${AnsiColor.BRIGHT_MAGENTA}
+${application.version}
+---
+${application.formatted-version}
+---
+${spring-boot.version}
+---
+${spring-boot.formatted-version}
+---
+${application.title}
