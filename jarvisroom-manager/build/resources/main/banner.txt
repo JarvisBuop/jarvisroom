@@ -1,0 +1,24 @@
+${AnsiColor.BRIGHT_YELLOW}
+     __                   .__
+    |__|____ __________  _|__| _____________  ____   ____   _____
+    |  \__  \\_  __ \  \/ /  |/  ___/\_  __ \/  _ \ /  _ \ /     \
+    |  |/ __ \|  | \/\   /|  |\___ \  |  | \(  <_> |  <_> )  Y Y  \
+/\__|  (____  /__|    \_/ |__/____  > |__|   \____/ \____/|__|_|  /
+\______|    \/                    \/                            \/
+
+
+${AnsiColor.BRIGHT_BLUE}
+
+::jarvisroom-manager::管理页面服务层
+
+---
+${AnsiColor.BRIGHT_MAGENTA}
+${application.version}
+---
+${application.formatted-version}
+---
+${spring-boot.version}
+---
+${spring-boot.formatted-version}
+---
+${application.title}

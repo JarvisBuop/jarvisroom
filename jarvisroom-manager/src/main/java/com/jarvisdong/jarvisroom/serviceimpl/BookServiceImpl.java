@@ -7,6 +7,10 @@ import com.jarvisdong.pojo.BookVo;
 import com.jarvisdong.service.BookService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
@@ -25,7 +29,9 @@ import java.util.Optional;
         registry = "${dubbo.registry.id}"
 )
 @Transactional
+@CacheConfig(cacheNames = "books")
 public class BookServiceImpl implements BookService {
+
     @PersistenceContext
     private EntityManager entityManager;
 
@@ -54,6 +60,8 @@ public class BookServiceImpl implements BookService {
         return bookVo;
     }
 
+    //#p0指的是方法中的第一个参数,value默认为cachenames
+    @CachePut(key = "'id'+#p0.id")
     @Override
     public BookVo update(BookVo bookVo) {
         int id = Integer.valueOf(bookVo.getId());
@@ -66,6 +74,7 @@ public class BookServiceImpl implements BookService {
         return bookVo;
     }
 
+    @CacheEvict(key = "'id' + #p0")
     @Override
     public BookVo delete(int id) {
         TBookEntity tBookEntity = bookRepository.findById(id).get();
@@ -73,11 +82,12 @@ public class BookServiceImpl implements BookService {
         return null;
     }
 
+    @Cacheable(key = "'id'+#p0")
     @Override
     public BookVo findById(int id) {
         TBookEntity tBookEntity = bookRepository.findById(id).get();
         BookVo bookVo = new BookVo();
-        BeanUtils.copyProperties(tBookEntity,bookVo);
+        BeanUtils.copyProperties(tBookEntity, bookVo);
         return bookVo;
     }
 }

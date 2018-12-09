@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--#zh-CN-->
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+    <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/css/base.css}" rel="stylesheet"/>
+    <link rel="icon" th:href="@{/images/favicon.ico}" type="image/x-icon"/>
+    <title>jr测试-书籍列表</title>
+</head>
+<body>
+
+<div class="container">
+
+    <h5> test spring project </h5>
+
+    <table class="table table-hover table-condensed">
+
+        <legend class="row">
+            <strong class="col-md-12">书籍列表</strong>
+        </legend>
+        <thead class="row">
+        <tr>
+            <th class="col-md-2">书籍编号</th>
+            <th class="col-md-4">书名</th>
+            <th class="col-md-2">作者</th>
+            <th class="col-md-2">简介</th>
+            <th class="col-md-2">管理</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr th:each="bookVo : ${bookLists}">
+            <th scope="row" th:text="${bookVo.id}"></th>
+            <td th:href="@{/book/detail/{bookId}(bookId=${bookVo.id})}" th:text="${bookVo.name}"></td>
+            <td th:text="${bookVo.writer}"></td>
+            <td th:text="${bookVo.introduction}"></td>
+            <td>
+                <a class="btn btn-danger" th:href="@{/book/update/{bookId}(bookId=${bookVo.id})}">编辑</a>
+                <a class="btn btn-danger" th:href="@{/book/delete/{bookId}(bookId=${bookVo.id})}">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div><a class="btn btn-primary" href="/book/create" role="button">新增书籍</a></div>
+</div>
+</body>
+</html>

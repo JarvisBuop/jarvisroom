@@ -21,13 +21,15 @@ dependencies {
     compile rootProject.ext.dependencies.springframework_test
     compile rootProject.ext.dependencies.thirdparty_druid
     compile rootProject.ext.dependencies.thirdparty_mysql
-//    compile rootProject.ext.dependencies.springframework_redis
-//    compile rootProject.ext.dependencies.springframework_data_redis
+    compile rootProject.ext.dependencies.springframework_redis
+    compile rootProject.ext.dependencies.springframework_data_redis
+    compile rootProject.ext.dependencies.springframework_cache
+    compile rootProject.ext.dependencies.springframework_freemarker
+
 //    compile rootProject.ext.dependencies.springframework_web
 //    compile rootProject.ext.dependencies.springframework_thymeleaf
 //    compile rootProject.ext.dependencies.springframework_validation
 //    compile rootProject.ext.dependencies.springframework_tomcat
-//    compile rootProject.ext.dependencies.springframework_freemarker
 //    compile rootProject.ext.dependencies.springframework_websocket
 //    compile rootProject.ext.dependencies.springframework_session
 //    compile rootProject.ext.dependencies.springframework_activemq
@@ -37,7 +39,8 @@ dependencies {
     //dubbo包;
     compile rootProject.ext.dependencies.springframework_dubbo
     compile rootProject.ext.dependencies.springframework_dubbo_actuator
-//    compile rootProject.ext.dependencies.thirdparty_kryo_serial
+//    compile rootProject.ext.dependencies.spring_io_dubbo
+
     //swgger框架;
 //    compile rootProject.ext.dependencies.thirdparty_swgger
 //    compile rootProject.ext.dependencies.thirdparty_swgger_ui

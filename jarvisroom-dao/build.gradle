@@ -7,4 +7,6 @@ dependencies {
     compile project(':jarvisroom-pojo')
 
     compile rootProject.ext.dependencies.springframework_validation_comptatible
+    //pojo中也有Page等分页对象,放在pojo中,但是不能序列化,使用自定义page对象;
+    compile rootProject.ext.dependencies.springframework_jpa
 }

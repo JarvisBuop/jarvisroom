@@ -1,8 +1,8 @@
 package com.jarvisdong.service;
 
 import com.jarvisdong.pojo.TbItem;
-import org.springframework.data.domain.Page;
+import com.jarvisdong.pojo.custom.SerialPageTo;
 
 public interface TbItemService {
-    Page<TbItem> findAllTbItemByPage(int currentPage);
+    SerialPageTo<TbItem> findAllTbItemByPage(int currentPage);
 }

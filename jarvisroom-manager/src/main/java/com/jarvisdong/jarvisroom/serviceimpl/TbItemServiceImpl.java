@@ -5,6 +5,7 @@ import com.jarvisdong.dao.entity.TbItemEntity;
 import com.jarvisdong.dao.repository.TbItemRepositoty;
 import com.jarvisdong.jarvisroom.util.SimpleBeanUtils;
 import com.jarvisdong.pojo.TbItem;
+import com.jarvisdong.pojo.custom.SerialPageTo;
 import com.jarvisdong.service.TbItemService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,11 +36,17 @@ public class TbItemServiceImpl implements TbItemService {
     TbItemRepositoty tbItemRepositoty;
 
     @Override
-    public Page<TbItem> findAllTbItemByPage(int currentPage) {
+    public SerialPageTo<TbItem> findAllTbItemByPage(int currentPage) {
         PageRequest pageable = PageRequest.of(currentPage, 10, new Sort(Sort.Direction.DESC, "created"));
+        //此处建议直接使用sql查询,使用Util传唤;
         Page<TbItemEntity> all = tbItemRepositoty.findAll(pageable);
-        //此处建议直接使用sql查询;
         List<TbItem> tbItems = SimpleBeanUtils.copyBean(TbItem.class, all.getContent());
-        return new PageImpl<TbItem>(tbItems,all.getPageable(),all.getTotalElements());
+        SerialPageTo<TbItem> result = new SerialPageTo<>();
+        result.setContent(tbItems);
+        result.setPage(pageable.getPageNumber());
+        result.setSize(pageable.getPageSize());
+        result.setTotal(all.getTotalElements());
+        result.setTotalPage(all.getTotalPages());
+        return result;
     }
 }

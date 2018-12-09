@@ -4,6 +4,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 //@EnableSwagger2 // 开启 Swagger
@@ -11,6 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //@EnableScheduling
 @EntityScan(basePackages = {"com.jarvisdong.dao.entity"})
 @EnableJpaRepositories(basePackages = {"com.jarvisdong.dao.repository"})
+@EnableCaching
 public class Application {
 
 	public static void main(String[] args) {

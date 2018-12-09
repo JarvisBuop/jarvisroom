@@ -5,6 +5,10 @@ import org.springframework.beans.BeanUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * 快速拷贝工具类
+ */
 public class SimpleBeanUtils {
 
     /**

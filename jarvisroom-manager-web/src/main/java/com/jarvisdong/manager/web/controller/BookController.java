@@ -73,7 +73,6 @@ public class BookController {
     }
 
 
-
     @RequestMapping(value = "/delete/{id}",method = {RequestMethod.GET,RequestMethod.POST})
     public String deleteBook(@PathVariable(value = "id") int id){
         logger.info(LogFormatter.formatInfo("删除书籍"));

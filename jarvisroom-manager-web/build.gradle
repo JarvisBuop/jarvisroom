@@ -19,14 +19,15 @@ dependencies {
     compile rootProject.ext.dependencies.springframework_web
     compile rootProject.ext.dependencies.springframework_thymeleaf
 
+    compile rootProject.ext.dependencies.springframework_actuator
+    //----------------dubbo-------------------
+    compile rootProject.ext.dependencies.springframework_dubbo
+    compile rootProject.ext.dependencies.springframework_dubbo_actuator
+//    compile rootProject.ext.dependencies.spring_io_dubbo
+
     //----------------spring-tools------------------
     compile rootProject.ext.dependencies.springframework_devtools
     compile rootProject.ext.dependencies.springframework_springloaded
 
-    //----------------dubbo-------------------
-    compile rootProject.ext.dependencies.springframework_actuator
-    compile rootProject.ext.dependencies.springframework_dubbo
-    compile rootProject.ext.dependencies.springframework_dubbo_actuator
-//    compile rootProject.ext.dependencies.thirdparty_kryo_serial
 
 }
