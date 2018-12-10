@@ -30,11 +30,12 @@ ext {
             springframework_session               : 'org.springframework.session:spring-session:1.3.0.RELEASE',
             springframework_springloaded          : "org.springframework:springloaded:1.2.6.RELEASE",
             springframework_validation_comptatible: "javax.validation:validation-api:1.1.0.Final",
-            spring_io_dubbo                       : "io.dubbo.springboot:spring-boot-starter-dubbo:1.0.0",
             //----------------------------alibaba duubbo 跨进程---------------------------------------
             thirdparty_druid                      : 'com.alibaba:druid:1.1.10',
+//            spring_io_dubbo                       : "io.dubbo.springboot:spring-boot-starter-dubbo:1.0.0",
             springframework_dubbo                 : "com.alibaba.boot:dubbo-spring-boot-starter:${dependencyVersion.dubbo_version}",
             springframework_dubbo_actuator        : "com.alibaba.boot:dubbo-spring-boot-actuator:${dependencyVersion.dubbo_version}",
+//            springframework_dubbo_extra           : "com.alibaba.spring:spring-context-support:1.0.2",
             //----------------------------spring相关包----------------------------------
             thirdparty_swgger                     : 'io.springfox:springfox-swagger2:2.8.0',
             thirdparty_swgger_ui                  : 'io.springfox:springfox-swagger-ui:2.8.0',
